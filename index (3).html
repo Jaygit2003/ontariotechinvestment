@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OntarioTech Investment</title>
+  <meta name="description" content="OntarioTech Investment — curated links, resources, and updates for students and investors." />
+  <meta property="og:title" content="OntarioTech Investment" />
+  <meta property="og:description" content="Curated links, resources, and updates for students and investors." />
+  <meta property="og:url" content="https://linktr.ee/ontariotechinvestment" />
+  <style>
+    :root{
+      --bg:#0f1724; /* dark navy */
+      --card:#0b1220;
+      --accent:#6ee7b7; /* mint */
+      --muted:#9aa4b2;
+      --glass: rgba(255,255,255,0.04);
+      --maxw:1000px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;background:linear-gradient(180deg,var(--bg),#071022 120%);color:#e6eef6;display:flex;align-items:center;justify-content:center;padding:40px 20px;
+    }
+    .wrap{width:100%;max-width:var(--maxw)}
+    header{display:flex;gap:16px;align-items:center}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:72px;height:72px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:700;color:#052022;font-size:20px;box-shadow:0 6px 20px rgba(0,0,0,0.6)}
+    h1{margin:0;font-size:28px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:28px;border-radius:18px;margin-top:22px;backdrop-filter: blur(6px);box-shadow: 0 8px 30px rgba(2,6,23,0.6)}
+
+    .hero{display:flex;gap:24px;align-items:center}
+    .avatar{width:120px;height:120px;border-radius:16px;background:var(--glass);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:36px}
+    .links{margin-top:18px;display:grid;gap:12px}
+
+    a.link-btn{display:block;padding:14px 18px;border-radius:12px;background:linear-gradient(90deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));text-decoration:none;color:inherit;border:1px solid rgba(255,255,255,0.04);transition:transform .12s ease, box-shadow .12s ease}
+    a.link-btn:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(3,9,25,0.6)}
+    .link-title{font-weight:600}
+    .link-sub{font-size:13px;color:var(--muted);margin-top:4px}
+
+    .actions{display:flex;gap:10px;margin-top:12px}
+    .btn{padding:10px 14px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.06);cursor:pointer}
+
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* Responsive */
+    @media (max-width:720px){
+      .hero{flex-direction:column;align-items:flex-start}
+      .avatar{width:96px;height:96px}
+      h1{font-size:22px}
+    }
+
+    /* subtle animated gradient underline */
+    .brand-underline{height:3px;border-radius:3px;margin-top:12px;background:linear-gradient(90deg,transparent,rgba(110,231,183,0.4),transparent);animation:slide 4s linear infinite}
+    @keyframes slide{0%{background-position:0%}100%{background-position:200%}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">OT</div>
+        <div>
+          <h1>OntarioTech Investment</h1>
+          <p class="lead">Curated links, resources, and updates for Ontario Tech students & investors</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="card" role="main" aria-label="OntarioTech Investment link hub">
+      <div class="hero">
+        <div class="avatar">OT</div>
+        <div style="flex:1">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+            <div>
+              <strong style="font-size:15px;display:block">OntarioTech Investment</strong>
+              <div style="color:var(--muted);font-size:13px;margin-top:6px">Official Linktree hub — quick access to social, resources, and application links.</div>
+            </div>
+            <div class="actions">
+              <button class="btn" onclick="copyURL()">Copy Linktree URL</button>
+              <a class="btn" href="https://linktr.ee/ontariotechinvestment" target="_blank" rel="noopener">Open Linktr.ee</a>
+            </div>
+          </div>
+
+          <div class="brand-underline" aria-hidden="true"></div>
+
+          <div class="links" id="links">
+            <!-- Example link items. Replace or reorder as needed. -->
+            <a class="link-btn" href="https://linktr.ee/ontariotechinvestment" target="_blank" rel="noopener">
+              <div class="link-title">Main Linktree</div>
+              <div class="link-sub">All links and quick access (Linktr.ee)</div>
+            </a>
+
+            <a class="link-btn" href="https://linktr.ee/ontariotechinvestment#events" target="_blank" rel="noopener">
+              <div class="link-title">Events & Workshops</div>
+              <div class="link-sub">Upcoming information sessions, meetups, and workshops</div>
+            </a>
+
+            <a class="link-btn" href="https://linktr.ee/ontariotechinvestment#apply" target="_blank" rel="noopener">
+              <div class="link-title">Apply / Join</div>
+              <div class="link-sub">Application forms and membership details</div>
+            </a>
+
+            <a class="link-btn" href="https://linktr.ee/ontariotechinvestment#resources" target="_blank" rel="noopener">
+              <div class="link-title">Resources & Guides</div>
+              <div class="link-sub">Guides for investing, budgeting, and student opportunities</div>
+            </a>
+
+            <a class="link-btn" href="mailto:info@ontariotechinvestment.edu" target="_self">
+              <div class="link-title">Contact Us</div>
+              <div class="link-sub">Email the team for partnership or questions</div>
+            </a>
+
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div>Built for OntarioTech Investment • <a href="https://linktr.ee/ontariotechinvestment" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">Visit linktr.ee/ontariotechinvestment</a></div>
+        <div style="margin-top:8px">Designed to be simple — want this exported as a GitHub-ready repo or converted to React?</div>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    function copyURL(){
+      navigator.clipboard.writeText('https://linktr.ee/ontariotechinvestment').then(()=>{
+        alert('Linktree URL copied to clipboard')
+      }).catch(()=>{
+        prompt('Copy this link:', 'https://linktr.ee/ontariotechinvestment')
+      })
+    }
+  </script>
+</body>
+</html>
