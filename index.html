@@ -7,10 +7,13 @@
   <meta name="description" content="OntarioTech Investment — curated links, resources, and updates for students and investors." />
   <meta property="og:title" content="OntarioTech Investment" />
   <meta property="og:description" content="Curated links, resources, and updates for students and investors." />
-  <meta property="og:url" content="https://linktr.ee/ontariotechinvestment" />
+  <meta property="og:url" content="https://ontariotechinvestmentresearch.netlify.app/" />
+  <meta property="og:image" content="https://ontariotechinvestmentresearch.netlify.app/preview.png" />
+  <meta name="theme-color" content="#3d85c6" />
+  <link rel="icon" href="/favicon.ico" />
   <style>
     :root{
-      --bg:#3d85c6; /* dark navy */
+      --bg:#3d85c6; /* blue gradient base */
       --card:#0b1220;
       --accent:#6ee7b7; /* mint */
       --muted:#9aa4b2;
@@ -21,41 +24,90 @@
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
-      margin:0;background:linear-gradient(180deg,var(--bg),#071022 120%);color:#e6eef6;display:flex;align-items:center;justify-content:center;padding:40px 20px;
+      margin:0;
+      background:linear-gradient(180deg,var(--bg),#071022 120%);
+      color:#e6eef6;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px 20px;
     }
     .wrap{width:100%;max-width:var(--maxw)}
     header{display:flex;gap:16px;align-items:center}
     .brand{display:flex;gap:12px;align-items:center}
-    .logo{width:72px;height:72px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:700;color:#052022;font-size:20px;box-shadow:0 6px 20px rgba(0,0,0,0.6)}
-    h1{margin:0;font-size:28px}
-    p.lead{margin:6px 0 0;color:var(--muted)}
+    .logo{
+      width:72px;height:72px;border-radius:14px;
+      background:linear-gradient(135deg,var(--accent),#3b82f6);
+      display:flex;align-items:center;justify-content:center;
+      font-weight:700;color:#052022;font-size:20px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.6)
+    }
+    h1{margin:0;font-size:32px;font-weight:700}
+    p.lead{margin:6px 0 0;color:var(--muted);font-size:15px}
 
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:28px;border-radius:18px;margin-top:22px;backdrop-filter: blur(6px);box-shadow: 0 8px 30px rgba(2,6,23,0.6)}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      padding:28px;border-radius:18px;margin-top:22px;
+      backdrop-filter: blur(6px);
+      box-shadow:0 8px 30px rgba(2,6,23,0.6)
+    }
 
     .hero{display:flex;gap:24px;align-items:center}
-    .avatar{width:120px;height:120px;border-radius:16px;background:var(--glass);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:36px}
+    .avatar{
+      width:120px;height:120px;border-radius:16px;
+      background:var(--glass);
+      display:flex;align-items:center;justify-content:center;
+      font-weight:700;font-size:36px
+    }
     .links{margin-top:18px;display:grid;gap:12px}
 
-    a.link-btn{display:block;padding:14px 18px;border-radius:12px;background:linear-gradient(90deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));text-decoration:none;color:inherit;border:1px solid rgba(255,255,255,0.04);transition:transform .12s ease, box-shadow .12s ease}
-    a.link-btn:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(3,9,25,0.6)}
-    .link-title{font-weight:600}
-    .link-sub{font-size:13px;color:var(--muted);margin-top:4px}
+    a.link-btn{
+      display:block;padding:14px 18px;border-radius:12px;
+      background:linear-gradient(90deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));
+      text-decoration:none;color:inherit;
+      border:1px solid rgba(255,255,255,0.04);
+      transition:transform .15s ease, box-shadow .15s ease
+    }
+    a.link-btn:hover{
+      transform:translateY(-4px);
+      box-shadow:0 8px 30px rgba(3,9,25,0.6),
+                 0 0 12px rgba(110,231,183,0.4)
+    }
+    .link-title{font-weight:600;font-size:16px}
+    .link-sub{font-size:14px;color:var(--muted);margin-top:4px}
 
-    .actions{display:flex;gap:10px;margin-top:12px}
-    .btn{padding:10px 14px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.06);cursor:pointer}
+    .actions{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+    .btn{
+      padding:10px 14px;border-radius:10px;
+      background:transparent;border:1px solid rgba(255,255,255,0.08);
+      cursor:pointer;color:inherit;
+      transition:all .15s ease
+    }
+    .btn:hover{
+      background:rgba(255,255,255,0.05);
+      border-color:var(--accent);
+      box-shadow:0 0 8px rgba(110,231,183,0.4)
+    }
 
     footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
 
     /* Responsive */
     @media (max-width:720px){
-      .hero{flex-direction:column;align-items:flex-start}
-      .avatar{width:96px;height:96px}
-      h1{font-size:22px}
+      .hero{flex-direction:column;align-items:center;text-align:center}
+      .avatar{width:96px;height:96px;margin-bottom:12px}
+      h1{font-size:24px}
     }
 
-    /* subtle animated gradient underline */
-    .brand-underline{height:3px;border-radius:3px;margin-top:12px;background:linear-gradient(90deg,transparent,rgba(110,231,183,0.4),transparent);animation:slide 4s linear infinite}
-    @keyframes slide{0%{background-position:0%}100%{background-position:200%}}
+    /* animated gradient underline */
+    .brand-underline{
+      height:3px;border-radius:3px;margin-top:12px;
+      background:linear-gradient(90deg,transparent,rgba(110,231,183,0.4),transparent);
+      background-size:300% 100%;
+      animation:slide 8s linear infinite
+    }
+    @keyframes slide{
+      0%{background-position:0%}100%{background-position:300%}
+    }
   </style>
 </head>
 <body>
@@ -77,7 +129,9 @@
           <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
             <div>
               <strong style="font-size:15px;display:block">OntarioTech Investment</strong>
-              <div style="color:var(--muted);font-size:13px;margin-top:6px">Official Linktree hub — quick access to social, resources, and application links.</div>
+              <div style="color:var(--muted);font-size:13px;margin-top:6px">
+                Official Linktree hub — quick access to social, resources, and application links.
+              </div>
             </div>
             <div class="actions">
               <button class="btn" onclick="copyURL()">Copy Linktree URL</button>
@@ -88,7 +142,6 @@
           <div class="brand-underline" aria-hidden="true"></div>
 
           <div class="links" id="links">
-            <!-- Example link items. Replace or reorder as needed. -->
             <a class="link-btn" href="https://linktr.ee/ontariotechinvestment" target="_blank" rel="noopener">
               <div class="link-title">Main Linktree</div>
               <div class="link-sub">All links and quick access (Linktr.ee)</div>
@@ -113,13 +166,17 @@
               <div class="link-title">Contact Us</div>
               <div class="link-sub">Email the team for partnership or questions</div>
             </a>
-
           </div>
         </div>
       </div>
 
       <footer>
-     <div>Built for OntarioTech Investment • <a href="https://linktr.ee/ontariotechinvestment" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">Visit linktr.ee/ontariotechinvestment</a></div>
+        <div>
+          Built for OntarioTech Investment • 
+          <a href="https://linktr.ee/ontariotechinvestment" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">
+            Visit linktr.ee/ontariotechinvestment
+          </a>
+        </div>
       </footer>
     </div>
   </div>
